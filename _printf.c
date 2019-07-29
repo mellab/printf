@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	{
 		while (d < 4)
 		{
-			if (format[b] == "%")
+			if (format[b] == '%')
 			{
 				if (format[b + 1] == *(ops[d].forma))
 				{
@@ -38,4 +38,5 @@ int _printf(const char *format, ...)
 	}
 	_puts("\n");
 	va_end(valist);
+	return (0);
 }
