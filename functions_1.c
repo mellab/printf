@@ -47,11 +47,11 @@ int printper(va_list valist)
 {
 	if (va_arg(valist, char *))
 	{
-		return(_putchar('%'));
+		return (_putchar('%'));
 	}
 	else
 	{
-		return(_putchar('%'));
+		return (_putchar('%'));
 	}
 	return (0);
 }
