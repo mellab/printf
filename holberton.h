@@ -11,7 +11,7 @@
 typedef struct formatarg
 {
 	char *forma;
-	void (*f)(va_list);
+	int (*f)(va_list);
 
 } formatico;
 
