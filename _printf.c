@@ -20,13 +20,15 @@ int _printf(const char *format, ...)
 	va_start(valist, format);
 	while (format != NULL && format[b] != 0)
 	{
-		for (;d < 4; d++)
+		for (; d < 4; d++)
 		{
 			c = 0;
 			if (format[b] == '%')
 			{
+				/*printf("\nentre en la posición igual a: %c \n", format[b]);*/
 				if (format[b + 1] == *(ops[d].forma))
 				{
+					/*printf("\nentre a buscar: %c \n", format[b + 1]);*/
 					ops[d].f(valist);
 					c = 1;
 					d = 4;
