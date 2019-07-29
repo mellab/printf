@@ -9,8 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list valist;
-	int b = 0;
-	int d = 0;
+	int b = 0, c = 0, d = 0;
 	formatico ops[] = {
 		{"c", printch},
 		{"s", prints},
@@ -21,22 +20,25 @@ int _printf(const char *format, ...)
 	va_start(valist, format);
 	while (format != NULL && format[b] != 0)
 	{
-		while (d < 4)
+		for (;d < 4; d++)
 		{
+			c = 0;
 			if (format[b] == '%')
 			{
 				if (format[b + 1] == *(ops[d].forma))
 				{
 					ops[d].f(valist);
+					c = 1;
 					d = 4;
+					b = b + 1;
 				}
 			}
-			d = d + 1;
 		}
+		if (c == 0)
+			_putchar(format[b]);
 		d = 0;
 		b = b + 1;
 	}
-	_puts("\n");
 	va_end(valist);
 	return (0);
 }
