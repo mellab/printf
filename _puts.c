@@ -7,7 +7,7 @@
  *
  */
 
-void _puts(char *str)
+int _puts(char *str)
 {
 	int a1 = 0;
 
@@ -16,4 +16,5 @@ void _puts(char *str)
 		_putchar(str[a1]);
 		a1 = a1 + 1;
 	}
+	return (a1);
 }
