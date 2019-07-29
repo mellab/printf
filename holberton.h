@@ -16,10 +16,10 @@ typedef struct formatarg
 } formatico;
 
 int _printf(const char *format, ...);
-void printch(va_list valist);
-void prints(va_list valist);
-void printdi(va_list valist);
+int printch(va_list valist);
+int prints(va_list valist);
+int printdi(va_list valist);
 int _putchar(char c);
-void _puts(char *str);
+int _puts(char *str);
 
 #endif /* _holberton_h_ */
