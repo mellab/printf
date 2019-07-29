@@ -9,18 +9,19 @@
 int _printf(const char *format, ...)
 {
 	va_list valist;
-	int b = 0, c = 0, d = 0;
+	int b = 0, c = 0, d = 0, cuenf = 0, len = 0;
 	formatico ops[] = {
 		{"c", printch},
 		{"s", prints},
 		{"i", printdi},
-		{"d", printdi}
+		{"d", printdi},
+		{"%", printper}
 	};
 
 	va_start(valist, format);
 	while (format != NULL && format[b] != 0)
 	{
-		for (; d < 4; d++)
+		for (; d < 5; d++)
 		{
 			c = 0;
 			if (format[b] == '%')
@@ -29,9 +30,9 @@ int _printf(const char *format, ...)
 				if (format[b + 1] == *(ops[d].forma))
 				{
 					/*printf("\nentre a buscar: %c \n", format[b + 1]);*/
-					ops[d].f(valist);
+					cuenf = cuenf + ops[d].f(valist);
 					c = 1;
-					d = 4;
+					d = 5;
 					b = b + 1;
 				}
 			}
@@ -41,6 +42,7 @@ int _printf(const char *format, ...)
 		d = 0;
 		b = b + 1;
 	}
+	len = b + cuenf;
 	va_end(valist);
-	return (0);
+	return (len);
 }

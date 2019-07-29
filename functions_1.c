@@ -45,7 +45,12 @@ int printdi(va_list valist)
  */
 int printper(va_list valist)
 {
-	if (va_arg(valist, char *) != NULL)
-	printf("%f", (float)va_arg(valist, double));
-	return (1);
+	if (va_arg(valist, char *))
+	{
+	}
+	else
+	{
+		return(_putchar('%'));
+	}
+	return (0);
 }
