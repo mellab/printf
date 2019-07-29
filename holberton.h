@@ -18,6 +18,6 @@ typedef struct formatarg
 int _printf(const char *format, ...);
 void printch(va_list valist);
 void prints(va_list valist);
-void printi(va_list valist);
+void printdi(va_list valist);
 
 #endif /* _holberton_h_ */
