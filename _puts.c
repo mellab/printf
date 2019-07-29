@@ -4,7 +4,7 @@
  * _puts - print the string
  * @str: input pointer
  *
- *
+ * Return: length of the string
  */
 
 int _puts(char *str)
