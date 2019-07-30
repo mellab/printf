@@ -88,7 +88,7 @@ int printper(va_list valist)
 int printbi(va_list valist)
 {
 	int numtc = 0;
-	int arrnum[8];
+	int arrnum[64];
 	int count = 0;
 	int vuelt = 0;
 
