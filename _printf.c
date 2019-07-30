@@ -20,10 +20,10 @@ int _printf(const char *format, ...)
 		return (-1);
 	while (format != NULL && format[b] != 0)
 	{
-		for (; d < 5; d++)
+		c = 0;
+		if (format[b] == '%')
 		{
-			c = 0;
-			if (format[b] == '%')
+			for (d = 0; d < 5; d++)
 			{
 				if (format[b + 1] == 0)
 					return (-1);
@@ -39,7 +39,6 @@ int _printf(const char *format, ...)
 		}
 		if (c == 0)
 			_putchar(format[b]);
-		d = 0;
 		b = b + 1;
 	}
 	len = b + cuenf - e;
