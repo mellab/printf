@@ -87,18 +87,13 @@ int printper(va_list valist)
  */
 int printbi(va_list valist)
 {
-	int numtc = 0;
+	unsigned int numtc = 0;
 	int arrnum[64];
 	int count = 0;
 	int vuelt = 0;
 
 	numtc = va_arg(valist, int);
-	if (numtc < 0)
-	{
-		_putchar(48);
-		return (1);
-	}
-	if (numtc == 0)
+	if (numtc < 1)
 	{
 		_putchar(48);
 		return (1);
