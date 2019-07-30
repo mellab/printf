@@ -34,8 +34,32 @@ int printch(va_list valist)
  */
 int printdi(va_list valist)
 {
-	printf("%d", va_arg(valist, int));
-	return (1);
+	int numtc = 0;
+	int cuen = 0;
+	int b = 0;
+	int c = 1;
+
+	numtc = va_arg(valist, int);
+	if (numtc < 0)
+	{
+		_putchar('-');
+		cuen = cuen + 1;
+		numtc = numtc * (-1);
+	}
+	while (c < numtc)
+	{
+		c = c * 10;
+	}
+	c = c / 10;
+	b = numtc;
+	while (c > 0)
+	{
+		b = numtc / c;
+		_putchar((b % 10) + '0');
+		cuen = cuen + 1;
+		c = c / 10;
+	}
+	return (cuen);
 }
 
 /**

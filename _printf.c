@@ -11,14 +11,16 @@ int _printf(const char *format, ...)
 	va_list valist;
 	int b = 0, c = 0, d = 0, cuenf = 0, len = 0, e = 0;
 	formatico ops[] = {
-		{"c", printch},
-		{"s", prints},
-		{"i", printdi},
-		{"d", printdi},
-		{"%", printper}
+		{"c", printch}, {"s", prints}, {"i", printdi},
+		{"d", printdi}, {"%", printper}
 	};
 
 	va_start(valist, format);
+	if (format == NULL)
+	{
+		_puts("(null)");
+		return (-1);
+	}
 	while (format != NULL && format[b] != 0)
 	{
 		for (; d < 5; d++)
@@ -26,10 +28,10 @@ int _printf(const char *format, ...)
 			c = 0;
 			if (format[b] == '%')
 			{
-				/*printf("\nentre en la posición igual a: %c \n", format[b]);*/
+				if (format[b + 1] == 0)
+					return (-1);
 				if (format[b + 1] == *(ops[d].forma))
 				{
-					/*printf("\nentre a buscar: %c \n", format[b + 1]);*/
 					cuenf = cuenf + ops[d].f(valist);
 					c = 2;
 					d = 5;
