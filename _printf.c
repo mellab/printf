@@ -17,10 +17,7 @@ int _printf(const char *format, ...)
 
 	va_start(valist, format);
 	if (format == NULL)
-	{
-		_puts("\n");
 		return (-1);
-	}
 	while (format != NULL && format[b] != 0)
 	{
 		for (; d < 5; d++)
