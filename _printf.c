@@ -31,9 +31,9 @@ int _printf(const char *format, ...)
 				{
 					cuenf = cuenf + ops[d].f(valist);
 					c = 2;
-					d = 5;
 					e = e + 2;
 					b = b + 1;
+					break;
 				}
 			}
 		}
