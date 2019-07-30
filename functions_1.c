@@ -12,7 +12,7 @@ int prints(va_list valist)
 
 	if (car == NULL)
 	{
-		_puts("(nul)");
+		_puts("(null)");
 		return (-1);
 	}
 	return (_puts(car));
