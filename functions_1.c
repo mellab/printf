@@ -37,10 +37,10 @@ int printch(va_list valist)
  */
 int printdi(va_list valist)
 {
-	int numtc = 0;
+	long int numtc = 0;
 	int cuen = 0;
-	int b = 0;
-	int c = 1;
+	long int b = 0;
+	long int c = 1;
 
 	numtc = va_arg(valist, int);
 	if (numtc < 0)
@@ -61,6 +61,11 @@ int printdi(va_list valist)
 		_putchar((b % 10) + '0');
 		cuen = cuen + 1;
 		c = c / 10;
+	}
+	if (numtc == 0)
+	{
+		_putchar(0 + 48);
+		cuen = 1;
 	}
 	return (cuen);
 }
