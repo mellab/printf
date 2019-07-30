@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	va_start(valist, format);
 	if (format == NULL)
 	{
-		_puts("(null)");
+		_puts("\n");
 		return (-1);
 	}
 	while (format != NULL && format[b] != 0)
