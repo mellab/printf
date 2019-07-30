@@ -20,6 +20,7 @@ int printch(va_list valist);
 int prints(va_list valist);
 int printdi(va_list valist);
 int printper(va_list valist);
+int printbi(va_list valist);
 int _putchar(char c);
 int _puts(char *str);
 
