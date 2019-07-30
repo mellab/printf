@@ -80,3 +80,40 @@ int printper(va_list valist)
 	(void) valist;
 	return (_putchar('%'));
 }
+/**
+ * printbi - Function to print dec to binary
+ * @valist: pointer to separator to print
+ * Return: return length
+ */
+int printbi(va_list valist)
+{
+	int numtc = 0;
+	int arrnum[64];
+	int count = 0;
+	int vuelt = 0;
+
+	numtc = va_arg(valist, int);
+	if (numtc < 0)
+	{
+		_putchar(48);
+		return (1);
+	}
+	if (numtc == 0)
+	{
+		_putchar(48);
+		return (1);
+	}
+	while (numtc > 0)
+	{
+		arrnum[count] = numtc % 2;
+		numtc = numtc / 2;
+		count++;
+	}
+	vuelt = count - 1;
+	while (vuelt >= 0)
+	{
+		_putchar(arrnum[vuelt] + '0');
+		vuelt = vuelt - 1;
+	}
+	return (count);
+}
