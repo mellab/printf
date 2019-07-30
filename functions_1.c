@@ -24,7 +24,10 @@ int prints(va_list valist)
  */
 int printch(va_list valist)
 {
-	_putchar((char)va_arg(valist, int));
+	int prin = 0;
+
+	prin = va_arg(valist, int);
+	_putchar(prin);
 	return (1);
 }
 /**
@@ -69,13 +72,6 @@ int printdi(va_list valist)
  */
 int printper(va_list valist)
 {
-	if (va_arg(valist, char *))
-	{
-		return (_putchar('%'));
-	}
-	else
-	{
-		return (_putchar('%'));
-	}
-	return (0);
+	(void) valist;
+	return (_putchar('%'));
 }
