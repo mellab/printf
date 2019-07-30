@@ -1,0 +1,5 @@
+.TH man 3 "30 July 2019" "Holberton School"
+.SH NAME
+.B _printf - formatted output for printing data
+.SH SYNOPSIS
+.B printf FORMAT [ARGUMENT]...
