@@ -46,10 +46,10 @@ int printdi(va_list valist)
 	if (numtc < 0)
 	{
 		_putchar('-');
-		cuen = cuen + 1;
 		numtc = numtc * (-1);
+		cuen = 1;
 	}
-	while (c < numtc)
+	while (c <= numtc)
 	{
 		c = c * 10;
 	}
@@ -59,13 +59,13 @@ int printdi(va_list valist)
 	{
 		b = numtc / c;
 		_putchar((b % 10) + '0');
-		cuen = cuen + 1;
 		c = c / 10;
+		cuen = cuen + 1;
 	}
 	if (numtc == 0)
 	{
 		_putchar(0 + 48);
-		cuen = 1;
+		cuen = cuen + 1;
 	}
 	return (cuen);
 }
