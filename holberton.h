@@ -21,6 +21,8 @@ int prints(va_list valist);
 int printdi(va_list valist);
 int printper(va_list valist);
 int printbi(va_list valist);
+int printrev(va_list valist);
+int print_rev(char *s);
 int _putchar(char c);
 int _puts(char *str);
 
