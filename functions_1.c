@@ -3,8 +3,8 @@
 #include <stdarg.h>
 /**
  * prints - Function to print strings.
- * @valist: pointer to separator to print
- * Return: do not return
+ * @valist: data type for iterating the list of arguments
+ * Return: string length like an int
  */
 int prints(va_list valist)
 {
@@ -18,10 +18,10 @@ int prints(va_list valist)
 	return (_puts(car));
 }
 /**
- * printch - Function to print all the arguments with separator.
- * @valist: pointer to separator to print
- * Return: do not return
- */
+ * printch - Function to print a character.
+ * @valist: data type for iterating the list of arguments
+ * Return: char length like an int
+*/
 int printch(va_list valist)
 {
 	int prin = 0;
@@ -82,8 +82,8 @@ int printper(va_list valist)
 }
 /**
  * printbi - Function to print dec to binary
- * @valist: pointer to separator to print
- * Return: return length
+ * @valist: data type for iterating the list of arguments
+ * Return: length of the binary
  */
 int printbi(va_list valist)
 {
