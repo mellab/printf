@@ -23,6 +23,8 @@ int printper(va_list valist);
 int printbi(va_list valist);
 int printrev(va_list valist);
 int print_rev(char *s);
+int printrot(va_list valist);
+char *rot13(char *s1);
 int _putchar(char c);
 int _puts(char *str);
 

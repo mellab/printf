@@ -2,7 +2,7 @@
 #include "holberton.h"
 #include <stdarg.h>
 /**
- * _printf - funtion to print according to format c,i,f,d
+ * _printf - funtion to print according to format c, s, i, f, d
  * @format: input format to print
  * Return: integer to check what is
  */
@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	formatico ops[] = {
 		{"c", printch}, {"s", prints}, {"i", printdi},
 		{"d", printdi}, {"%", printper}, {"b", printbi},
-		{"r", printrev}
+		{"r", printrev}, {"R", printrot}
 	};
 
 	va_start(valist, format);
@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		c = 0;
 		if (format[b] == '%')
 		{
-			for (d = 0; d < 7; d++)
+			for (d = 0; d < 8; d++)
 			{
 				if (format[b + 1] == 0)
 					return (-1);
