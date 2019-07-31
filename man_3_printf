@@ -11,13 +11,15 @@ Prints a formatted string to the standard output as in the printf function of th
 
 .B Format string
 
-The format string can contain any type of characters.
+A format string can contain any character.
 
 .B Conversion specifiers
 
+Specify the data type of the variable that its going to be printed.
+
 .sp
 .B i, d
-- int arguments.
+- Prints integers and decimals arguments.
 .sp
 .B c
 - Prints a single character.
@@ -29,5 +31,6 @@ The format string can contain any type of characters.
 - An espace sequence for the character %.
 .SH NOTES
 _printf depends of system call write() which is implemented throught a custom printing function: _putchar
+
 .SH AUTHORS
 Written by Alejandro Mogollon and Paulo Morillo.
