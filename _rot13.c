@@ -57,5 +57,5 @@ int printrot(va_list valist)
 		return (6);
 	}
 	dest = rot13(car);
-	return(_puts(dest));
+	return (_puts(dest));
 }
