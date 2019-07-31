@@ -3,13 +3,38 @@
 .B _printf
 - formatted output for printing data
 .SH SYNOPSIS
-.B printf FORMAT [ARGUMENT]...
+.B #include \(dqholberton.h\(dq
+.sp
+.B int _printf(const char *format, ...);
+.sp
+.B int printch(va_list valist);
+.sp
+.B int prints(va_list valist);
+.sp
+.B int printdi(va_list valist);
+.sp
+.B int printper(va_list valist);
+.sp
+.B int printbi(va_list valist);
+.sp
+.B int printrev(va_list valist);
+.sp
+.B int print_rev(char *s);
+.sp
+.B int printrot(va_list valist);
+.sp
+.B char *rot13(char *s1);
+.sp
+.B int _putchar(char c);
+.sp
+.B int _puts(char *str);
+.sp
 .SH DESCRIPTION
 Prints a formatted string to the standard output as in the printf function of the C standard library. It is a handy way to produce precisely-formatted output from numerical or textual arguments.
 
 .B Format string
 
-A format string can contain any character.
+A format string that can contain any character.
 
 .B Conversion specifiers
 
