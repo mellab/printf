@@ -12,7 +12,8 @@ int _printf(const char *format, ...)
 	int b = 0, c = 0, d = 0, cuenf = 0, len = 0, e = 0;
 	formatico ops[] = {
 		{"c", printch}, {"s", prints}, {"i", printdi},
-		{"d", printdi}, {"%", printper}, {"b", printbi}
+		{"d", printdi}, {"%", printper}, {"b", printbi},
+		{"r", printrev}
 	};
 
 	va_start(valist, format);
@@ -23,7 +24,7 @@ int _printf(const char *format, ...)
 		c = 0;
 		if (format[b] == '%')
 		{
-			for (d = 0; d < 6; d++)
+			for (d = 0; d < 7; d++)
 			{
 				if (format[b + 1] == 0)
 					return (-1);
