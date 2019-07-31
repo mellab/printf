@@ -1,9 +1,8 @@
-# printf﻿<img
+# printf
+<img
   src="https://secure.meetupstatic.com/photos/event/b/c/5/6/600_475548214.jpeg"
   align="center"
 />
-
-# Printf
 
 ## Description
 
@@ -75,8 +74,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o printf
 ### Examples
 
 * ```_printf("Hello, World!")``` *prints "Hello, World!"*
-* ```_printf("%s", "Hello")``` *prints "Hello"*
 
 ### Authors
-* **Alejandro Mogollon** - [935@holbertonschool.com](https://github.com/mellab)
-* **Paulo Morillo** - [pauloan@hotmail.com](https://github.com/PauloMorillo)
+* **Alejandro Mogollon** - [mellab](https://github.com/mellab)
+* **Paulo Morillo** - [PauloMorillo](https://github.com/PauloMorillo)
