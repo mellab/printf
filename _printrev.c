@@ -23,7 +23,6 @@ int print_rev(char *s)
 		a1 = a1 - 1;
 		_putchar(s[a1]);
 	}
-	_putchar('\n');
 	return (a2);
 }
 

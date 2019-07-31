@@ -7,8 +7,14 @@
 .sp
 printf OPTION
 .SH DESCRIPTION
-Prints a formatted string to the standard output. It is a handy way to produce
-precisely-formatted output from numerical or textual arguments.
+Prints a formatted string to the standard output as in the printf function of the C standard library. It is a handy way to produce precisely-formatted output from numerical or textual arguments.
+
+.B Format string
+
+The format string can contain any type of characters.
+
+.B Conversion specifiers
+
 .sp
 .B i, d
 - int arguments.
@@ -21,4 +27,7 @@ precisely-formatted output from numerical or textual arguments.
 .sp
 .B %
 - An espace sequence for the character %.
-
+.SH NOTES
+_printf depends of system call write() which is implemented throught a custom printing function: _putchar
+.SH AUTHORS
+Written by Alejandro Mogollon and Paulo Morillo.
