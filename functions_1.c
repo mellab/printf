@@ -32,48 +32,48 @@ int printch(va_list valist)
 }
 /**
  * printdi - Function to print all the numbers integer or doubles.
- * @valist: pointer to separator to print
- * Return: do not return
+ * @valist: data type for iterating the list of arguments
+ * Return: digits numbers of an integer or a double
  */
 int printdi(va_list valist)
 {
-	long int numtc = 0;
-	int cuen = 0;
+	long int numtpr = 0;
+	int len = 0;
 	long int b = 0;
 	long int c = 1;
 
-	numtc = va_arg(valist, int);
-	if (numtc < 0)
+	numtpr = va_arg(valist, int);
+	if (numtpr < 0)
 	{
 		_putchar('-');
-		numtc = numtc * (-1);
-		cuen = 1;
+		numtpr = numtpr * (-1);
+		len = 1;
 	}
-	while (c <= numtc)
+	while (c <= numtpr)
 	{
 		c = c * 10;
 	}
 	c = c / 10;
-	b = numtc;
+	b = numtpr;
 	while (c > 0)
 	{
-		b = numtc / c;
+		b = numtpr / c;
 		_putchar((b % 10) + '0');
 		c = c / 10;
-		cuen = cuen + 1;
+		len = len + 1;
 	}
-	if (numtc == 0)
+	if (numtpr == 0)
 	{
 		_putchar(0 + 48);
-		cuen = cuen + 1;
+		len = len + 1;
 	}
-	return (cuen);
+	return (len);
 }
 
 /**
  * printper - Function to print arguments float
- * @valist: pointer to separator to print
- * Return: do not return
+ * @valist: data type for iterating the list of arguments
+ * Return: length of the character corresponding percentage
  */
 int printper(va_list valist)
 {
