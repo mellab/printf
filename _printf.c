@@ -2,7 +2,7 @@
 #include "holberton.h"
 #include <stdarg.h>
 /**
- * _printf - funtion to print according to format c,i,f,d
+ * _printf - funtion to print according to format c, s, i, f, d
  * @format: input format to print
  * Return: integer to check what is
  */
